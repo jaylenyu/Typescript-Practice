@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "outDir": "section1/dist",
+    "strict": false,
+    "moduleDetection": "force",
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src"]  
+}
