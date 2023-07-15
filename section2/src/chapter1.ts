@@ -1,5 +1,3 @@
-import { isUndefined } from "util";
-
 // Number
 let a: number = 223;
 let b: number = 0.3323;
