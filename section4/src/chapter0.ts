@@ -16,7 +16,7 @@ function introduce(name: string, tall: number, age?: number) {
 introduce('정인', 190, 32)
 
 
-// 
+// rest파라미터 타입
 function getSum(...rest: number[]) {
     let sum = 0;
     rest.forEach((it) => sum += it)
