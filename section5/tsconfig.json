@@ -2,12 +2,12 @@
     "compilerOptions": {
         "target": "ESNext",
         "module": "ESNext",
-        "outDir": "section5/dist",
+        "outDir": "dist",
         "strict": true,
         "moduleDetection": "force",
     },
     "ts-node": {
         "esm": true
     },
-    "include": ["section5/src"]
+    "include": ["src"]
 }
