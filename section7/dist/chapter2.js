@@ -24,6 +24,11 @@ function forEach(arr, callback) {
         callback(arr[i]);
     }
 }
-let C = forEach(arr2, (el) => console.log(el.toFixed()));
+let C = forEach(arr2, (el) => {
+    console.log(el); // number
+});
 console.log(C);
+let D = forEach(["str1", "str2", "str3"], (el) => {
+    el; // string
+});
 export {};
