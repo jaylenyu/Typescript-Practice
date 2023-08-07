@@ -38,17 +38,18 @@ let result2 = removeSpaces(undefined); // undefined
 // 함수 오버로딩으로 작성
 // 타입 단언보다 함수 오버로딩으로 작성함
 // 오버로드 시그니쳐의 조건부 타입은 구현 시그니쳐 내부에서 추론이 가능하기 때문
+// (타입정의를 더 완벽하게 할 수 있음)
 function removeSpaces3<T>(text: T): T extends string ? string : undefined;
-function removeSpaces3(text: any) {
+function removeSpaces3(text: any) { //매개변수는 any타입으로 지정해도 됨
   if (typeof text === "string") {
     return text.replaceAll(" ", "");
+    // return 0;
+    // return null; string이 아닌 값을 return하면 오버로드시그니쳐가 이를 감지해줌
   } else {
     return undefined;
   }
 }
 
-let result3 = removeSpaces3("hi im winterlood");
-// string
+let result3 = removeSpaces3("hi im winterlood");// string
 
-let result4 = removeSpaces3(undefined);
-// undefined
+let result4 = removeSpaces3(undefined);// undefined
